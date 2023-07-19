@@ -1,0 +1,57 @@
+main {
+  padding: 100px;
+}
+.container {
+  background: rgba(245, 245, 245, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.524) 1px 2px 15px;
+  border: solid rgba(42, 42, 103, 0.696) 1px;
+}
+.container-header {
+  background: rgb(81, 81, 164);
+  border: solid rgba(42, 42, 103, 0.696) 1px;
+  border-bottom: none;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+  height: 100%;
+  border-radius: 5px 5px 0px 0px;
+  display: flex;
+  justify-content: space-around;
+}
+.header-button {
+  margin: 5px;
+}
+.header-text {
+  text-align: center;
+
+  user-select: none;
+  font-weight: 300;
+
+  width: 100%;
+  font-size: 35px;
+  margin-right: 15px;
+}
+.container-body {
+  margin-bottom: 50px;
+  width: 90%;
+
+  max-height: fit-content;
+}
+.modal {
+  width: 1600px;
+}
+.order-button {
+  background: #dbeb61;
+  color: black;
+}
+.rotate-button {
+  transition: transform 0.5s;
+}
+
+.rotate-button.rotated {
+  transform: rotate(180deg);
+}

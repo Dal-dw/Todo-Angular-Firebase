@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "todo-app-dal"
+  },
+  "targets": {
+    "todo-app-dal": {
+      "hosting": {
+        "login": [
+          "todo-app-dal"
+        ]
+      }
+    }
+  }
+}

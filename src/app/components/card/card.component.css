@@ -1,0 +1,92 @@
+.card {
+  margin-bottom: 5px;
+  height: min-content;
+}
+
+.card-checked {
+  margin-bottom: 10px;
+
+  filter: opacity(50%);
+}
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+}
+.acordeon {
+  width: 85%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.buttons-container {
+  display: flex;
+  width: 110%;
+  justify-content: space-around;
+}
+.warning-icon {
+  color: rgb(170, 149, 30);
+}
+.delete-icon {
+  color: rgb(187, 21, 21);
+}
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+
+.custom-checkbox__input {
+  opacity: 0;
+}
+
+.custom-checkbox__checkmark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.custom-checkbox__checkmark::after {
+  content: "✔️";
+  display: block;
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -60%) rotate(0deg);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.custom-checkbox__input:checked + .custom-checkbox__checkmark::after {
+  opacity: 1;
+}
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+}
+
+.tarea {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(39, 0, 0);
+
+  width: 100%;
+  text-align: center;
+}
+.tarea-description {
+  text-align: start;
+}
+.important-button {
+  margin-right: 5px;
+}

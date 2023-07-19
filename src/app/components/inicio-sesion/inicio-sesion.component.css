@@ -1,0 +1,37 @@
+/* Centrar el componente de registro */
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  margin: 100px;
+  background: rgba(59, 59, 220, 0.5);
+  width: 40%;
+  border-color: rgba(11, 9, 45, 0.5);
+}
+
+/* Ajustar el tamaño del componente de registro */
+.registration-form {
+  width: 90%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-size: 30px;
+  color: rgba(11, 9, 90);
+  text-shadow: 1px 1px 1px rgb(97, 157, 185);
+}
+.left {
+  width: 85%;
+  height: 93vh;
+  background: rgba(59, 59, 220, 0.9);
+  border-right: 1px solid #ccc;
+  border-color: rgba(11, 9, 45, 0.5);
+}
+main {
+  display: flex;
+}
