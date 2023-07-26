@@ -37,6 +37,8 @@ Permite a los usuarios personalizar el orden de las tareas  por fecha de creaci�
 4. Gestión de contraseñas con envío de correos electrónicos
 Permite a los usuarios restablecer sus contraseñas en caso de olvido. Se enviará un correo electrónico con instrucciones para restablecer la contraseña.
 
+5. Responsive.
+
 Captura de pantalla: Gestión de contraseñas
 
 Pasos para gestionar contraseñas:
@@ -53,7 +55,3 @@ Firebase Authentication: Autenticación de usuarios segura.
 Firebase Realtime Database: Base de datos en tiempo real para almacenar y sincronizar datos.
 Angular Material: Librería de componentes de interfaz de usuario.
 
->>>>>>> master
-=======
-Tipica aplicacion "TODO" en Angular / Firebase y con Login ademas de algunos agregados interesantes.
->>>>>>> 740283d4036002dafb219348361129e55377e467
