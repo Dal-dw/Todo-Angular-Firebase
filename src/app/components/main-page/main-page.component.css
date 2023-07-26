@@ -1,5 +1,5 @@
 main {
-  padding: 100px;
+  padding: 50px;
 }
 .container {
   background: rgba(245, 245, 245, 0.85);
@@ -9,6 +9,17 @@ main {
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.524) 1px 2px 15px;
   border: solid rgba(42, 42, 103, 0.696) 1px;
+}
+@media (max-width: 611px) {
+  main {
+    width: 99%;
+    padding: 0px;
+    margin-left: 2px;
+    padding-top: 5px;
+  }
+  .container {
+    width: 100%;
+  }
 }
 .container-header {
   background: rgb(81, 81, 164);

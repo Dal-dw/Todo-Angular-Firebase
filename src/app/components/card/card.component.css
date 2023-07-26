@@ -1,6 +1,7 @@
 .card {
   margin-bottom: 5px;
   height: min-content;
+  transform: scale(0.9);
 }
 
 .card-checked {
@@ -22,6 +23,7 @@
   width: 110%;
   justify-content: space-around;
 }
+
 .warning-icon {
   color: rgb(170, 149, 30);
 }
@@ -89,4 +91,19 @@
 }
 .important-button {
   margin-right: 5px;
+}
+/* Media query para pantallas con ancho menor a 611px y alto menor a 641px */
+@media (max-width: 611px) {
+  .buttons-container {
+    flex-direction: column;
+    transform: scale(0.8);
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .tarea {
+    font-size: 15px;
+  }
+  .tarea-description {
+    font-size: 12px;
+  }
 }

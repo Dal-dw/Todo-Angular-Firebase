@@ -5,6 +5,16 @@
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 611px) {
+  .toolbar {
+    width: 100%;
+    padding: 0px;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
 .container {
   background-color: white;
   background-image: url(../img/wave.png);
