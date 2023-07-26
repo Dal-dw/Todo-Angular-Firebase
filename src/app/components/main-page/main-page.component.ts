@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalAddComponent } from 'src/app/modal-add/modal-add.component';
+import { ModalAddComponent } from 'src/app/components/modal-add/modal-add.component';
 import { MatDialog } from '@angular/material/dialog';
 import { TodoService } from 'src/app/services/todo.service';
 import Todo from 'src/app/interfaces/todo.interface';

@@ -30,11 +30,11 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { FormComponent } from './components/form/form.component';
-import { ModalAddComponent } from './modal-add/modal-add.component';
+import { ModalAddComponent } from './components/modal-add/modal-add.component';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 
 import { AuthGuardModule } from '@angular/fire/auth-guard';
-import { ModalEditComponent } from './modal-edit/modal-edit.component';
+import { ModalEditComponent } from './components/modal-edit/modal-edit.component';
 import { ResetPwComponent } from './components/reset-pw/reset-pw.component';
 
 @NgModule({

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import Todo from 'src/app/interfaces/todo.interface';
 import { TodoService } from 'src/app/services/todo.service';
-import { ModalEditComponent } from 'src/app/modal-edit/modal-edit.component';
+import { ModalEditComponent } from 'src/app/components/modal-edit/modal-edit.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Subscription, first } from 'rxjs';
 

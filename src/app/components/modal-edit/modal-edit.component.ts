@@ -1,8 +1,8 @@
 import { Component, Inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { TodoService } from '../services/todo.service';
+import { TodoService } from '../../services/todo.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import Todo from '../interfaces/todo.interface';
+import Todo from '../../interfaces/todo.interface';
 
 @Component({
   selector: 'app-modal-edit',

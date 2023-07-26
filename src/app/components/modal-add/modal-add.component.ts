@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { TodoService } from '../services/todo.service';
-import Todo from '../interfaces/todo.interface';
+import { TodoService } from '../../services/todo.service';
+import Todo from '../../interfaces/todo.interface';
 import { first } from 'rxjs';
 
 @Component({
