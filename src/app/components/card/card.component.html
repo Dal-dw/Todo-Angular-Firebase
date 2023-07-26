@@ -1,0 +1,108 @@
+<ng-container *ngIf="loadingData; else cardContent">
+  <div class="spinner-container">
+    <mat-progress-spinner
+      class="spinner"
+      mode="indeterminate"
+      diameter="30"
+    ></mat-progress-spinner>
+  </div>
+</ng-container>
+
+<ng-template #cardContent>
+  <mat-card class="card" *ngFor="let todo of todos; let i = index">
+    <mat-card-content
+      class="card-content"
+      [style.opacity]="checkboxStates[i] ? '0.3' : '1'"
+      [style.background]="
+        importanteStates[i] ? 'rgba(243, 243, 21, 0.444)' : ''
+      "
+    >
+      <div class="encabezado">
+        <div class="acordeon">
+          <mat-accordion>
+            <mat-expansion-panel hideToggle>
+              <mat-expansion-panel-header
+                class="acordeon-header"
+                [style.background]="
+                  importanteStates[i] ? 'rgba(243, 243, 21, 0.25)' : ''
+                "
+              >
+                <mat-panel-description>
+                  <div class="tarea">
+                    {{ todo.tarea }}
+                  </div>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p class="tarea-description">{{ todo.descripcion }}</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel
+              (opened)="panelOpenState = true"
+              (closed)="panelOpenState = false"
+            >
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+        <div class="botones">
+          <mat-panel-description class="buttons-container">
+            <mat-chip-listbox aria-label="Fish selection">
+              <label class="custom-checkbox">
+                <input
+                  type="checkbox"
+                  class="custom-checkbox__input"
+                  [(ngModel)]="checkboxStates[i]"
+                  (change)="onCheckboxChange(i, todo)"
+                  name="checkbox"
+                />
+                <span
+                  class="custom-checkbox__checkmark"
+                  matTooltip="Marcar como completada"
+                >
+                </span>
+              </label>
+            </mat-chip-listbox>
+            <button
+              mat-icon-button
+              color="primary"
+              (click)="onClickEdit(i, todo)"
+            >
+              <mat-icon
+                color="primary"
+                aria-hidden="false"
+                aria-label="Example home icon"
+                fontIcon="edit"
+              ></mat-icon>
+            </button>
+
+            <button mat-icon-button color="warn" (click)="onClickDelete(todo)">
+              <mat-icon
+                class="delete-icon"
+                color="accent"
+                aria-hidden="false"
+                aria-label="Example home icon"
+                fontIcon="delete"
+              ></mat-icon>
+            </button>
+
+            <button
+              value="red"
+              color="accent"
+              class="important-button"
+              mat-icon-button
+              matTooltip="Marcar como importante"
+              (click)="onImportanteChange(i, todo)"
+              name="importante"
+            >
+              <mat-icon
+                class="warning-icon"
+                color="accent"
+                aria-hidden="false"
+                aria-label="Example home icon"
+                fontIcon="warning"
+              ></mat-icon>
+            </button>
+          </mat-panel-description>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</ng-template>

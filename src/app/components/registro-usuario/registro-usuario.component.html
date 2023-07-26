@@ -1,0 +1,44 @@
+<main>
+  <div class="left"></div>
+
+  <div class="registration-container" *ngIf="!registroExitoso">
+    <h1>Registrarse</h1>
+    <form
+      class="registration-form"
+      [formGroup]="registroForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <mat-form-field appearance="fill">
+        <mat-label>Correo</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error
+          class="mat-error"
+          *ngIf="!registroForm.hasError('emailValidator')"
+        >
+          Por favor ingrese un email válido.
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="password" />
+
+        <mat-error class="mat-error" *ngIf="!registroForm.hasError('required')">
+          La contraseña debe tener al menos 6 caracteres.
+        </mat-error>
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!registroForm.valid"
+      >
+        Registrar
+      </button>
+    </form>
+  </div>
+  <div class="registration-container" *ngIf="registroExitoso">
+    <app-inicio-sesion></app-inicio-sesion>
+  </div>
+</main>

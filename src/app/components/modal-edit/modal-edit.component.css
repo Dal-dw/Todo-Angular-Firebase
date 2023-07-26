@@ -1,0 +1,15 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.button-submit {
+  margin-top: 15px;
+}
+.dialog-content {
+  width: 100%;
+  max-width: 1800px;
+}
+.dialog-content {
+  max-width: 1800px;
+  width: 100%;
+}

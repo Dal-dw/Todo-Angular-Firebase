@@ -1,0 +1,43 @@
+<main>
+  <mat-toolbar class="toolbar">
+    <div>
+      <div *ngIf="!isUserLoggedIn()">
+        <button
+          mat-button
+          class="button"
+          (click)="onRegisterClick()"
+          routerLink="/registro"
+          [ngClass]="{ highlighted: lastClickedButton === 'registro' }"
+        >
+          Registro
+        </button>
+
+        <button
+          mat-button
+          class="button"
+          routerLink="/login"
+          (click)="onLoginClick()"
+          [ngClass]="{ highlighted: lastClickedButton === 'login' }"
+        >
+          Login
+        </button>
+        <button
+          (click)="onMainClick()"
+          mat-button
+          class="button"
+          routerLink="/main"
+        >
+          Tareas
+        </button>
+      </div>
+    </div>
+    <div *ngIf="isUserLoggedIn()">
+      <button (click)="onLogout()" mat-raised-button color="warn">
+        Logout
+      </button>
+    </div>
+  </mat-toolbar>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</main>

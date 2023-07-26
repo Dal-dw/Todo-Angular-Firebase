@@ -1,0 +1,42 @@
+<div mat-dialog-content class="dialog-content">
+  <h1 mat-dialog-title>Agregar Tarea</h1>
+  <ng-container *ngIf="!guardandoDatos; else spinnerTemplate">
+    <form class="form" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <mat-label>Tarea</mat-label>
+        <input matInput formControlName="tarea" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Descripción</mat-label>
+        <textarea matInput formControlName="descripcion"></textarea>
+      </mat-form-field>
+
+      <mat-checkbox
+        value="false"
+        formControlName="importante"
+        class="example-margin"
+      >
+        Importante
+      </mat-checkbox>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        class="button-submit"
+      >
+        Agregar
+      </button>
+    </form>
+  </ng-container>
+
+  <ng-template #spinnerTemplate>
+    <div class="spinner-container">
+      <mat-spinner diameter="30"></mat-spinner>
+    </div>
+  </ng-template>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cerrar</button>
+  </div>
+</div>
