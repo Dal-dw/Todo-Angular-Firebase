@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 # Todo-Angular-Firebase
+<<<<<<< HEAD
 Tipica aplicacion "TODO" en Angular con Firebase pero con algunos agregados interesantes.
 =======
 # TODO APP DAL
@@ -53,3 +54,6 @@ Firebase Realtime Database: Base de datos en tiempo real para almacenar y sincro
 Angular Material: Librería de componentes de interfaz de usuario.
 
 >>>>>>> master
+=======
+Tipica aplicacion "TODO" en Angular / Firebase y con Login ademas de algunos agregados interesantes.
+>>>>>>> 740283d4036002dafb219348361129e55377e467
