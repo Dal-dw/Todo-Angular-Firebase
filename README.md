@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 # Todo-Angular-Firebase
-<<<<<<< HEAD
+
 Tipica aplicacion "TODO" en Angular con Firebase pero con algunos agregados interesantes.
 =======
 # TODO APP DAL
